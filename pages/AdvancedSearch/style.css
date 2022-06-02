@@ -1,0 +1,673 @@
+
+html {
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0px;
+}
+
+table {
+	border-color: rgb(0, 0, 0, 0);
+}
+
+.grid-top h2, .grid-bottom h2 {
+	font-weight: bold;
+	font-size: 29px;
+}
+
+.grid-top h3 , .grid-bottom h3 {
+	font-weight: normal;
+	font-size: 19px;
+}
+
+
+.box-description {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	height: 50px;
+}
+
+.left {
+    text-align: left;
+}
+
+.menu-box {
+	width: 100%;
+	height: 100%;
+
+	border-radius: calc(40px + (1vw - 15.3px) * 0.8 );
+	background-color: var(--gray);
+	text-align: center;
+}
+
+.menu-box:not(#universe_box) {
+	position: relative;
+	z-index: 1;
+}
+#universe_box {
+	position: relative;
+	z-index: 2;
+}
+
+.search-table {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 3%;
+}
+
+
+.search-info {
+	padding: 20px 0;
+	width: 100%;
+	height: fit-content;
+	background-color: var(--primary);
+	word-wrap: break-word;
+}
+
+.search-info > h2 {
+	font-size: 40px;
+	margin: 20px 50px;
+}
+
+
+.search-info > h3 {
+	font-size: 25px;
+	margin: 20px 50px;
+	font-weight: normal;
+}
+
+.search-table > tbody > tr:nth-child(3) > td {
+	padding: 0px;
+	height: 15px;
+}
+
+
+.search-table > tbody > tr:nth-child(4) > td > h3 {
+	margin: 0 0 5px 0;
+}
+
+.search-table .line {
+	height: 3.2px;
+}
+
+
+
+.grid-bottom .reset-button {
+	width: 100%;
+	height: 100%;
+}
+.reset-button > * {
+	all:unset;
+	
+	width: calc(100% - 9.5px * 2);
+	height: calc(100% - 9.5px * 2);
+	border-radius: 40px;
+
+	border: solid var(--secondary) 9.5px;
+
+	text-align: center;
+	
+
+	font-size: 29px;
+	font-weight: bold;
+
+
+	background-color: var(--secondary);
+	
+	color: var(--white);
+}
+.reset-button > *:hover {
+
+	background-color: var(--white);
+	border-color: var(--secondary);
+	color: var(--secondary);
+}
+.reset-button > *:active {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--white);
+}
+.reset-button > *:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+}
+
+.grid-bottom .search-button {
+	width: 100%;
+	height: 100%;
+}
+.search-button > * {
+	all:unset;
+	
+	width: calc(100% - 9.5px * 2);
+	height: calc(100% - 9.5px * 2);
+	border-radius: 40px;
+
+	border: solid var(--primary) 9.5px;
+
+	text-align: center;
+	
+
+	font-size: 29px;
+	font-weight: bold;
+
+
+	background-color: var(--primary);
+	
+	color: var(--white);
+}
+.search-button > *:hover {
+
+	background-color: var(--white);
+	border-color: var(--primary);
+	color: var(--primary);
+}
+.search-button > *:active {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--white);
+}
+.search-button > *:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+}
+
+div.i, div.h {
+	border-radius: 0px;
+}
+
+.search-table .align-center {
+	text-align: center;
+}
+
+
+.character-search-input {
+	all: unset;
+
+	width: 92%;
+	height: 30px;
+	border-radius: 10px;
+	background-color: var(--white);
+	padding: 6px 15px;
+    font-size: 22px;
+	font-weight: bold;
+	color: var(--extra-dark-gray);
+	margin: 4% 0 0 0;
+	transition: var(--dark-mode-transition-duration) background-color;
+	text-align: left;
+}
+.character-search-input::placeholder {
+	color: var(--light-gray);
+}	
+.character-search-input:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+}
+
+
+
+.universe-search-input {
+	all: unset;
+
+	width: 85%;
+	height: 30px;
+	border-radius: 100px;
+	background-color: var(--white);
+	padding: 6px 30px;
+	
+    font-size: 22px;
+	font-weight: bold;
+	color: var(--extra-dark-gray);
+	margin: 4% 0 0 0;
+	transition: var(--dark-mode-transition-duration) background-color;
+	text-align: left;
+
+	background-image: url("/icons/search-icon-gray.png") ;
+    background-size: 26px;
+    background-position: 3% 50%;
+    background-repeat: no-repeat;
+	text-indent: 4.5%;
+
+	position: relative;
+	z-index: 3;
+
+}
+
+.universe-search-input::placeholder {
+	color: var(--light-gray);
+}	
+
+.show-shadow-border:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+}
+
+/*  UNIVERSE TEXT BOX OPTIONS DROPDOWN  */ 
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: absolute;
+	display: inline-block;
+	
+	width: calc(79% + (30px * 2));
+	height: 100%;
+	pointer-events: none;
+	margin: 0 auto;
+	margin-top: calc(4% - 2px);
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--white);
+
+	width: 100%;
+	
+	z-index: 3;
+
+	pointer-events: all;
+
+	padding: 43px 0 0 0;
+
+	border-radius: 21.5px;
+
+	overflow: hidden;
+
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+	
+}
+
+/* Links inside the dropdown */
+.dropdown-content > div {
+	padding: 15px 16px;
+
+	display: block;
+
+	cursor: pointer;
+
+	z-index: 7;
+}
+
+.dropdown-content > div > span {
+	color: var(--extra-dark-gray);
+	text-decoration: none;
+	font-weight: bold;
+
+	font-size: 22px;
+
+	margin-left: 53px;
+
+	pointer-events: none;
+}
+
+.dropdown-content > div > .image-cropper {
+	width: 40px;
+	height: 40px;
+
+	overflow: hidden;
+	position: absolute;
+	background-color: var(--primary);
+	z-index: 6;
+	transform: translate(3px, -5px);
+	
+	border-radius: 5px;
+
+	pointer-events: none;
+}
+
+.dropdown-content > div > .image-cropper > img {
+	width: 110px;
+	height: 110px;
+	object-fit: cover;
+	transform: translate(-35px, -32px);
+	position: absolute;
+	z-index: 6;
+
+	pointer-events: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content > div:hover {
+	background-color: var(--extra-light-gray);
+}
+
+/* Show the dropdown menu */
+.show {
+	display: block;
+}
+
+
+.year-search-input {
+	all: unset;
+
+	width: 65%;
+	height: 30px;
+	border-radius: 10px;
+	background-color: var(--white);
+	padding: 6px 15px;
+    font-size: 22px;
+	font-weight: bold;
+	color: var(--extra-dark-gray);
+	margin: 4% 0 0 0;
+	transition: var(--dark-mode-transition-duration) background-color;
+	text-align: center;
+}	
+.year-search-input::placeholder {
+	color: var(--light-gray);
+}	
+.year-search-input:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+}
+
+.year-input-text > h3 {
+	margin-top: 6px;
+}
+
+
+
+.d .checkbox-table, .e .checkbox-table {
+	max-height: 350px;
+	min-height: 185px;
+}
+
+.f .checkbox-table, .g .checkbox-table {
+	max-height: 350px;
+	min-height: 80px;
+}
+
+
+.checkbox-table {
+	width: 100%;
+    height: 85%;
+
+	margin: 0;
+	
+}
+
+.checkbox-table td {
+	width: 50%;
+	font-size: 18px;
+}
+
+.g .checkbox-table tr:nth-child(3) div {
+	display: block;
+	height: 22.8px;
+	width: 100%;
+}
+
+
+/* ------------------------------ CHECKBOXES ------------------------------ */
+
+/* Customize the label (the container) */
+.checkbox-table .container {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-table .container input[type=checkbox] {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-table .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	background-color: var(--white);
+	border-radius: 5px;
+
+	filter: drop-shadow(0px 0px 9.2px rgba(0, 0, 0, calc(0.5 * var(--dark-mode) + (1 - var(--dark-mode)) * 0.3)));
+}
+
+/* On mouse-hover, add a background color */
+.checkbox-table .container:hover input[type=checkbox] ~ .checkmark {
+	background-color: var(--extra-light-gray);
+	transition: 0.05s;
+}
+.checkbox-table .container:hover {
+	color: var(--extra-light-gray);
+}
+
+/* When the checkbox is checked, add a background */
+.checkbox-table .container input[type=checkbox]:checked ~ .checkmark {
+	background-color: var(--primary);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-table .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Show the checkmark when checked */
+.checkbox-table .container input[type=checkbox]:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-table .container .checkmark:after {
+	left: 6.8px;
+	top: 2px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.grid-top {
+    display: grid;
+	grid-template-areas: 	
+							'a . b . c';
+    grid-template-rows: 1.2fr;
+    grid-template-columns: 0.6fr 0.1fr 0.6fr 0.1fr 0.6fr;
+    height: 270px;
+	margin: 50px 50px;
+}
+
+.grid-bottom {
+    display: grid;
+	grid-template-areas:	
+							'd . e . f . g'
+							'd . e . . . .'
+							'd . e . h . i';
+    grid-template-rows: 1.6fr 50px 0.5fr;
+    grid-template-columns: 0.6fr 0.1fr 0.6fr 0.1fr 0.6fr 0.1fr 0.6fr;
+    height: 500px;
+	margin: 0 50px 50px 50px;
+}
+
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+.g { grid-area: g; }
+.h { grid-area: h; }
+.i { grid-area: i; }
+
+
+/* ------------------------------ Media Queries ------------------------------ */
+
+@media screen and (max-width: 1390px) {
+    .grid-top {
+        display: grid;
+        grid-template-areas: 
+							 '. a .'
+                             '. . .'
+                             '. b .'
+                             '. . .'
+                             '. c .'
+                             '. . .';
+        grid-template-rows: 300px 50px 300px 50px 300px 50px; 
+        grid-template-columns: 0.3fr 2.1fr 0.3fr;
+        height: auto;
+    }
+
+	.grid-bottom {
+        display: grid;
+        grid-template-areas: 
+							 '. d . e .'
+                             '. . . . .'
+                             '. f . g .'
+                             '. . . . .'
+                             '. h . i .';
+        grid-template-rows: 550px 50px 300px 50px 100px; 
+        grid-template-columns: 0.3fr 1fr 0.1fr 1fr 0.3fr;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .grid-top {
+        display: grid;
+		grid-template-areas:
+							'. a .'
+							'. . .'
+							'. b .'
+							'. . .'
+							'. c .';
+        grid-template-rows: 300px 50px 300px 50px 300px; 
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        height: auto;
+		margin-bottom: 50px;
+    }
+
+	.grid-bottom {
+        display: grid;
+		grid-template-areas:
+							'. d .'
+							'. . .'
+							'. e .'
+							'. . .'
+							'. f .'
+							'. . .'
+							'. g .'
+							'. . .'
+							'. h .'
+							'. . .'
+							'. i .';
+        grid-template-rows: 550px 50px 550px 50px 300px 50px 270px 50px 100px 50px 100px; 
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        height: auto;
+    }
+
+	.g .checkbox-table tr:nth-child(3) div {
+		display: block;
+		height: 0px;
+		width: 0px;
+		background-color: green;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	
+	.grid-top {
+        display: grid;
+		grid-template-areas:	
+								'a'
+								'.'
+								'b'
+								'.'
+								'c';
+        grid-template-rows: 300px 50px 300px 50px 300px;
+        grid-template-columns: 1fr;
+        height: auto;
+		margin: 50px auto 50px auto;
+		width: 64.6vw;
+		min-width: 250px;
+    }
+
+	.grid-bottom {
+        display: grid;
+		grid-template-areas: 	
+								'd'
+								'.'
+								'e'
+								'.'
+								'f'
+								'.'
+								'g'
+								'.'
+								'h'
+								'.'
+								'i';
+        grid-template-rows: 550px 50px 550px 50px 300px 50px 260px 50px 100px 50px 100px; 
+        grid-template-columns: 1fr;
+		margin: 0 auto 50px auto;
+		width: 64.6vw;
+		min-width: 250px;
+        height: auto;
+    }
+
+	.checkbox-table td {
+		font-size: 16px;
+		letter-spacing: 0.1px;
+	}
+
+	.character-search-input {
+		/* width: calc(85% - 15px); */
+		width: calc(100% - (15px + (0.03 * 220px)) * 2);
+		
+	}
+
+	.universe-search-input {
+		width: calc(100% - (30px + (0.03 * 220px)) * 2);
+	}
+	.dropdown {
+	
+		width: calc((81% + 12% - (30px + (0.03 * 220px)) * 2) + (30px * 2));
+
+	}
+
+	.year-input-text > h3 {
+		
+		display: none;
+	}
+
+	.year-input-text:nth-child(3)::before {
+		display: inline-flex;
+		width: 100%;
+		content: " ~ ";
+	}
+
+
+}
+
+@media screen and (max-width: 250px) {
+
+	.menu-box {
+		border-radius: 0px;
+	}
+	
+}
+
+
+

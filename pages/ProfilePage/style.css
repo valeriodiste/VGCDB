@@ -1,0 +1,457 @@
+
+html {
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+}
+
+
+.profile-page-info {
+	padding: 20px 7%;
+	width: 86%;
+	height: fit-content;
+	background-color: var(--primary);
+	word-wrap: break-word;
+}
+
+.profile-page-info > h2 {
+	font-size: 40px;
+	margin: 20px 50px;
+}
+
+
+.profile-page-info > h3 {
+	font-size: 25px;
+	margin: 20px 50px;
+	font-weight: normal;
+}
+
+
+.page-content {
+
+	background-color: var(--white);
+	margin: 0;
+	width: 90%;
+	padding: 50px 5% 0 5%;
+	text-align: center;
+}
+
+.bg-gray {
+	background-color: var(--gray);
+}
+
+.horizontal-character-card {
+	background-color: var(--gray);
+}
+
+.user-info {
+	width: calc(90% - 120px);
+	margin: 0 auto 0 auto;
+	padding: 40px 60px;
+
+	border-radius: 75px;
+
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
+}
+
+
+.user-info > div {
+	margin: 15px 0;
+}
+
+.user-info > .profile-main > div {
+	display: inline-flex;
+}
+
+
+.user-info > .profile-main {
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.user-info .profile-name-icon {
+	border-radius: 40px;
+	padding: 20px 25px;
+	min-width: 400px;
+}
+
+
+.user-info > .profile-main > .profile-logout {
+	display: inline-flex;
+	width: auto;
+	height: 100%;
+	vertical-align: center;
+	text-align: right;
+	margin: auto 0;
+
+	user-select: none;
+}
+
+
+.profile-logout > .login-option {
+	margin: 14px 0px;
+	width: 100%;
+	min-width: 200px;
+	display: inline-flex;
+	cursor: pointer;
+	user-select: none;
+	justify-content: right;
+}
+
+
+.profile-logout > .login-option:hover {
+	filter: drop-shadow(0 0 7.65px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5)) drop-shadow(0 0 3px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.55));
+	text-decoration: underline;
+}
+
+
+.profile-logout > .login-option > a {
+	pointer-events: none;
+}
+
+
+.profile-logout .icon {
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	margin: auto 30px auto 10px;
+}
+
+.profile-logout .icon > img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+
+.user-info > div > .profile-info {
+	font-size: 35px;
+	margin: 0 0 30px 0;
+	height: 50px;
+}
+
+.user-info > div > div > .username-text {
+	font-size: 45px;
+	vertical-align: center;
+	margin: auto 30px;
+}
+
+.user-info > div > div > .icon-container {
+	width: 90px;
+	height: 90px;
+}
+
+
+.user-info > div > div > .icon-container > img {
+	width: 100%;
+	object-fit: contain;
+}
+
+.user-info .user-stats {
+	border-radius: 40px;
+	padding: 30px 35px;
+	font-size: 27px;
+}
+
+.user-info > .user-stats > div {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	font-weight: normal;
+	margin: 10px 0;
+}
+
+
+.user-info > .user-stats > div:nth-child(1) {
+	margin-right: 10px;
+	white-space: wrap;
+}
+
+
+.user-info > .user-stats > div > div:nth-child(2) {
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+
+.favourites {
+    width: 90%;
+	margin: 50px auto 0px auto;
+
+	display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+
+}
+
+.favourites > .favourites-info {
+	
+	width: calc(100% - (50px * 2));
+	height: 60px;
+	line-height: 60px;
+
+	padding: 15px 50px;
+
+	vertical-align: center;
+
+	text-align: left;
+
+	margin: 0px auto 0px auto;
+	border-radius: 35px;
+	font-size: 35px;
+	font-weight: bold;
+
+	position: relative;
+	z-index: 1;
+
+	white-space: nowrap;
+
+	overflow: hidden;
+
+}
+
+.favourites-section {
+	width: 100%;
+
+	padding-top: calc( 20px + ((-60px - 15px - 15px) * -1));
+	top: calc(-60px - 15px - 15px);
+
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+	background-color: var(--dark-red);
+
+	border-start-start-radius: 35px;
+	border-start-end-radius: 35px;
+
+	border-end-start-radius: 75px;
+	border-end-end-radius: 75px;
+
+	padding-bottom: 10px;
+
+	position: relative;
+
+	text-align: left;
+}
+
+
+/* Characters cards */
+.favourites-section > div.horizontal-character-card {
+	margin: 30px 10px;
+}
+
+
+.no-favourites {
+	margin: 10px auto 40px auto;
+	width: 93%;
+	font-size: 22px;
+	text-align: left;
+}
+
+.no-favourites > div {
+	width: 97%;
+	margin: 0 auto;
+}
+
+.no-favourites > div > * {
+	margin: 15px 0;
+}
+
+.no-favourites p {
+	font-size: 25px
+}
+
+@media screen and (max-width: 1180px) {
+
+	.user-info .user-stats {
+		padding: 30px 30px;
+		font-size: 22px;
+	}
+
+
+}
+
+@media screen and (max-width: 950px) {
+
+	.user-info .user-stats {
+		padding: 30px 30px;
+		font-size: 22px;
+	}
+	
+	.user-info .profile-name-icon {
+		border-radius: 40px;
+		padding: 20px 25px;
+		width: 100%;
+		min-width: 0px;
+	}
+
+	.user-info .profile-logout * {
+		display: none;
+	}
+
+}
+
+
+/* Trasforma le hoirizontal character cards in vertical character cards + altri cambiamenti */
+@media screen and (max-width: 650px) {
+		
+	.horizontal-character-card {
+		width: 275.3px;
+		height: 390px;
+		margin: 0 auto 0;
+		border-radius: 53.53px;
+		transition: 0.1s;
+	}
+
+	.horizontal-character-card::before {
+		position: absolute;
+		display: block;
+		content: "";
+		width: 275.3px;
+		height: 390px;
+		z-index: 10000;
+		border-radius: 53.53px;
+		opacity: 0.2;
+		transition: 0.1s;
+	}
+
+	.horizontal-character-card:hover {
+		box-shadow: 0 0 0 12px rgb(0, 0, 0, 0.2);
+		transition: 0.1s;
+	}
+
+
+	.horizontal-character-card > div {
+		width: 100%;
+		margin-top: 5%;
+		display: block;
+		margin-right: 5%;
+		text-align: center;
+	}
+
+	
+	.horizontal-character-card > div > div:nth-child(2) {
+		margin-top: 5%;
+		
+	}
+
+	.horizontal-character-card > div::after {
+		padding-top: 100%;
+		content: "";
+		float: left;
+		
+	}
+
+	.horizontal-character-card > div > div > div > a {
+		font-size: 1.3em;
+		font-weight: bold;
+		text-align: center;
+		margin: 15.3px 15.3px;
+		white-space: nowrap;
+		overflow-x: hidden;
+	}
+
+	.horizontal-character-card > div > div > div:nth-child(2) {
+		margin: 0px 0 0 0;
+	}
+
+	.horizontal-character-card > div > div > div > p {
+		text-align: center;
+		margin: 12.23px 7.65px 0;
+		white-space: nowrap;
+		overflow-x: hidden;
+	}
+
+	.horizontal-character-card > div > div > div:not(.character-image-container) {
+		width: 100%;
+		height: 1.5em;
+
+		/* per centrare il testo verticalmente */
+		line-height: 1.5em;
+	}
+
+		
+	.horizontal-character-card > div > .character-image-container {
+		width: 88%;
+		border-radius: 17%;
+		overflow: hidden;
+		margin: auto;
+		text-align: left;
+	}
+
+
+	.horizontal-character-card > div > .character-image-container:before {
+		padding-top: 100%;
+		content: "";
+		float: left;
+	}
+	
+		
+	.favourites > .favourites-info {
+
+		padding: 15px 0px;
+		width: 100%;
+		font-size: 6vw;
+		word-wrap: break-word;
+		white-space: wrap;
+		text-align: center;
+
+	}
+
+	
+	.user-info {
+		padding: 30px 50px;
+		width: calc(90% - 100px);
+	}
+
+	.profile-name-icon {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.user-info .profile-info {
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.user-stats > div {
+		text-align: center;
+		flex-direction: column;
+	}
+	
+	.user-info > .user-stats > div > div:nth-child(2) {
+		margin-top: 10px;
+		
+	}
+
+}
+
+
+@media screen and (max-width: 475px) {
+
+	.user-info > div > div > .username-text {
+		font-size: 29px;
+	}
+
+	.user-info .profile-info > h3 {
+		font-size: 33px;
+	}
+
+	.user-info {
+		padding: 25px 35px;
+		width: calc(90% - 70px);
+	}
+
+}
+

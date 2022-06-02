@@ -1,0 +1,509 @@
+#menu-bar {
+	width: 100vw;
+	height: 54px;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	
+	display: block;
+	
+	margin: 0px;
+}
+
+#menu-bar > .menu-icons {
+	width: 100%;
+	height: 54px;
+	top: 0;
+	margin: 0px;
+	overflow-x: hidden;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+
+	font-size: 27px;
+	font-weight: bold;
+}
+
+#menu-bar > .menu-icons > div {
+	opacity: 0;
+}
+
+#menu-bar > .menu-icons > .vgcdb {
+	font-size: 30px;
+	cursor: pointer;
+	transform: translateX(1.63vw);
+}
+#menu-bar > .menu-icons > .vgcdb:hover {
+	filter: drop-shadow(0 0 7.65px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5)) drop-shadow(0 0 3px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.55));
+	text-decoration: underline;
+}
+
+#menu-bar > .menu-icons > .menu {
+	width: fit-content;
+	height: fit-content;
+	margin: 0 18px;
+	/* background-color: var(--gray); */
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+#menu-bar > .menu-icons > .menu:hover {
+	filter: drop-shadow(0 0 7.65px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5)) drop-shadow(0 0 3px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.55));
+	text-decoration: underline;
+}
+#menu-bar > .menu-icons > .menu::after {
+	content: "menu";
+	margin-bottom: 5px;
+}
+
+#menu-bar > .menu-icons > .menu > .menu-icon-lines {
+	width: 31px;
+	height: 30px;
+	margin: 0 10px 0 0;
+	/* background-color: var(--dark-gray); */
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	align-items: center;
+}
+
+#menu-bar > .menu-icons > .menu > .menu-icon-lines > .line {
+	height: 4.5px;
+	border-radius: 20px;
+}
+
+#menu-bar > .menu-icons > .login {
+	width: fit-content;
+	height: fit-content;
+	margin: 0 17.5px 0 5px;
+	/* background-color: var(--gray); */
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	user-select: none;
+}
+#menu-bar > .menu-icons > .login:hover {
+	filter: drop-shadow(0 0 7.65px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5)) drop-shadow(0 0 3px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.55));
+	text-decoration: underline;
+}
+#menu-bar > .menu-icons > .label {
+	margin-bottom: 4px;
+}
+
+#menu-bar > .menu-icons > .login > .login-icon {
+	width: 38px;
+	height: 38px;
+	margin: 0 0 0 10px;
+	
+}
+
+#menu-bar > .menu-icons > .login > .login-icon > img {
+	width: 100%;
+	height: 100%;
+}
+
+#menu-bar .icon {
+	pointer-events: none
+}
+
+/* ------------------ Menu Expanded ----------------------- */
+
+#menu-expanded {
+	width: 0;
+	height: 0;
+	
+	margin: 0;
+	position: absolute;
+	overflow: hidden;
+
+	align-items: center;
+	justify-content: space-between;
+
+	font-size: 24px;
+	font-weight: bold;
+
+	z-index: 7;
+	background-color: var(--primary);
+	border-end-end-radius: 600px;
+	transform: translateY(-54px);
+	transition: 0.3s;
+
+	/* animation: left-menu-in 0.25s ease-out forwards; */
+	
+}
+
+@keyframes left-menu-in {
+	from {
+		width: 0px;
+		height: 0px;
+	}
+	to {
+		width: 480px;
+		height: 480px;
+	}
+}
+
+
+@keyframes left-menu-out {
+	from {
+		width: 480px;
+		height: 480px;
+	}
+	to {
+		width: 0px;
+		height: 0px;
+	}
+}
+
+#menu-expanded > .menu-content {
+	margin: 0px 15px;
+	width: 400px;
+
+	height: 400px;
+	display: block;
+	
+}
+
+#menu-expanded > .menu-content > .menu-option {
+	margin: 14px 0px;
+	width: fit-content;
+	min-width: 200px;
+	display: inline-flex;
+	
+	cursor: pointer;
+	user-select: none;
+}
+
+#menu-expanded > .menu-content > .menu-option:hover {
+	filter: drop-shadow(0 0 7.65px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5)) drop-shadow(0 0 3px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.55));
+	text-decoration: underline;
+}
+
+#menu-expanded > .menu-content > .menu-option > a {
+	pointer-events: none;
+}
+
+#menu-bar .icon {
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	
+}
+
+#menu-expanded .icon {
+	margin: 0px 11px 0px 5px;
+}
+
+#click-area-outside {
+	height: 0vh;
+	background-color: #000;
+}
+
+@keyframes click-outside-menu-active {
+	0% {
+		opacity: 0;
+		height: 0vh;
+	}
+	1% {
+		height: 100vh;
+	}
+	100% {
+		height: 100vh;
+		opacity: 0.45;
+	}
+}
+
+@keyframes click-outside-menu-inactive {
+	0% {
+		opacity: 0.45;
+		height: 100vh;
+	}
+	99% {
+		opacity: 0;
+		height: 100vh;
+	}
+	100% {
+		opacity: 0;
+		height: 0vh;
+	}
+}
+
+
+#menu-bar .icon > img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* ------- Switches ---------- */
+
+.menu-switch {
+	width: fit-content;
+	height: fit-content;
+	display: inline-flex;
+	cursor: pointer;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin-right: 10px;
+	margin-left: 2px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.switch > span:not(.slider) {
+	margin-left: 59px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--gray);
+	transition: 0.2s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--white);
+	transition: 0.2s;
+}
+
+input:checked + .slider {
+	background-color: var(--secondary);
+}
+
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* ------------------ Login Expanded ----------------------- */
+
+#login-expanded {
+	width: 0;
+	height: 0;
+	
+	margin: 0;
+	position: absolute;
+	right: 0px;
+	overflow: hidden;
+
+	/* display: inline-flex; */
+	align-items: center;
+	justify-content: space-between;
+
+	font-size: 24px;
+	font-weight: bold;
+
+	z-index: 7;
+	background-color: var(--primary);
+	border-end-start-radius: 600px;
+	transform: translateY(-54px);
+
+	/* animation: right-menu-in 0.25s 1s ease-out forwards; */
+}
+
+.login-content {
+	width: 300px;
+	margin: 0px 15px 0px 0px;
+	height: 400px;
+	display: block;
+	float: right;
+}
+
+.login-content > .login-option {
+	margin: 14px 0px;
+	width: 100%;
+	min-width: 200px;
+	display: inline-flex;
+	cursor: pointer;
+	user-select: none;
+	justify-content: right;
+	/* transition: 0.3s; */
+}
+
+
+.login-content > .login-option:hover {
+	filter: drop-shadow(0 0 7.65px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5)) drop-shadow(0 0 3px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.55));
+	text-decoration: underline;
+}
+
+
+.login-content > .login-option > a {
+	pointer-events: none;
+}
+
+
+#login-expanded .icon {
+	margin: 0px 5px 0px 11px;
+}
+
+@keyframes right-menu-in {
+	from {
+		width: 0px;
+		height: 0px;
+	}
+	to {
+		width: 260px;
+		height: 260px;
+	}
+}
+
+
+@keyframes right-menu-out {
+	from {
+		width: 260px;
+		height: 260px;
+	}
+	to {
+		width: 0px;
+		height: 0px;
+	}
+}
+
+/* ------------------------------- */
+
+
+@media screen and (max-width: 600px) {
+	#menu-bar .vgcdb {
+		display: none;
+	}
+
+	#menu-expanded {
+		height: 480px;
+		transition: 0.3s;
+	}
+
+	#menu-expanded > .menu-content > .menu-option {
+		margin: 14px 0px;
+		width: 80vw;
+		display: inline-flex;
+		
+		transition: 0.3s;
+	}
+	
+	@keyframes left-menu-in {
+		from {
+			width: 0px;
+			border-end-end-radius: 600px;
+		}
+		to {
+			width: 100vw;
+			border-end-end-radius: 0;
+
+		}
+	}
+
+	@keyframes left-menu-out {
+		from {
+			width: 100vw;
+			border-end-end-radius: 0;
+		}
+		to {
+			width: 0px;
+			border-end-end-radius: 600px;
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#menu-bar > .menu-icons > .login > .label {
+		display: none;
+	}
+
+	#menu-bar > .menu-icons > .menu::after {
+		display: none;
+	}
+}
+
+/* ------------------ Transition in and out animations ----------------------- */
+
+@keyframes menu-bar-in {
+	0% {
+		background-color: var(--white);
+	}
+	100% {
+		background-color: var(--primary);
+	}
+}
+
+@keyframes menu-bar-out {
+	0% {
+		background-color: var(--primary);
+	}
+	33% {
+		background-color: var(--primary);
+	}
+	100% {
+		background-color: var(--white);
+	}
+}
+
+
+@keyframes menu-bar-out-homepage {
+	0% {
+		background-color: var(--primary);
+	}
+	33% {
+		background-color: var(--primary);
+	}
+	100% {
+		background-color: var(--red);
+	}
+}
+
+@keyframes opacity-in {
+	0% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes opacity-out {
+	0% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+

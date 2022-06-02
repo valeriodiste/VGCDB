@@ -1,0 +1,375 @@
+html {
+	overflow-x: hidden;
+}
+
+body {
+	width: 100vw;
+	margin: 0%;
+}
+
+#main {
+	width: 100%;
+	height: fit-content;
+	background-color: var(--secondary);
+	margin: 0px;
+	overflow: hidden;
+}
+
+.banner {
+	width: 100vw;
+	height: 260px;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	text-align: center;
+}
+.banner::after {
+	/* Pseudo-Elemento, posizionato dopo l'immagine, alla fine del div con classe .banner, che fa comparire le box-shadow inset*/
+	content: "";
+	display: block;
+	/* 110 e non 100 per evitare problemi (leggi qui sotto) */
+	width: 110vw;
+	/* Serve, insieme ala width pari a 110vw, a nascondere le box-shadows inset a sinistra e destra */
+	transform: translateX(-5vw);
+	height: 260px;
+	box-shadow:
+		inset 0px 7.8px 47.87px 3.97px rgba(0, 0, 0, 0.4),
+		inset 0px -7.8px 47.87px 3.97px rgba(0, 0, 0, 0.4);
+}
+
+.banner > img {
+	width: 101%;
+	min-width: 1544.7px;
+	position: absolute;
+	transform: translate(-50%, -28.8%);
+}
+
+.back {
+	background-color: var(--secondary);
+	width: 100%;
+	height: 296.7px;
+	margin: 0px;
+	display: inline-flex;
+}
+
+.front {
+	width: calc(787.6px + 3.5vw + (1vw * 30) - (15.3px * 30));
+
+	height: 101%;
+	position: relative;
+	margin: 0px;
+	vertical-align: middle;
+}
+.front::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(0% 0%, 100% 0%, 96.5% 100%, 0% 100%);
+	background-color: var(--primary);
+	position: absolute;
+	margin: 0px;
+}
+
+.character-name {
+	font-size: 100%;
+}
+
+.character-name > h2 {
+	white-space: nowrap;
+}
+
+.character-series {
+	font-size: 100%;
+}
+
+.character-series > p {
+	margin: 2% 0%;
+	font-size: 0.9em;
+	display: inline-flex;
+	white-space: nowrap;
+}
+
+.character-card {
+	width: 283px;
+	background-color: var(--secondary);
+	border-radius: 20%;
+	transform:
+		translateX(calc(18vw - 182px)) translateY(-20%);
+	margin: 0;
+
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+}
+.character-card:before {
+	/* sets the aspect ratio */
+	padding-top: 100%;
+	/* controls the aspect ratio (is equal to [(WIDTH/HEIGHT)*100]% */
+	content: "";
+	float: left;
+}
+
+.character-description {
+	transform: translateX(calc(18.5vw - 182px)) translateY(-15%);
+
+	font-size: 35.17px;
+	display: inline-block;
+	position: absolute;
+	margin: 42.15px;
+
+	width: 45%;
+}
+
+.character-table .line {
+	padding: 0px;
+}
+
+.table-card {
+	width: 34.5vw;
+	height: 282.9px;
+	border-radius: calc(53.5px - 2.1 * (15.3px - 1vw));
+	background: var(--primary);
+	transform:
+		translateX(calc(4.4vw + 8.5vw - (15.3px * 8.5))) translateY(-20%);
+	display: inline-flex;
+}
+
+.character-table {
+	table-layout: fixed;
+	margin: 2.5% 6%;
+	width: 100%;
+	font-size: 1.6vw;
+}
+
+.table-attribute {
+	text-align: left;
+	font-weight: bold;
+	padding: 0% 0% 0% 2%;
+	width: 50%;
+	height: 15%;
+}
+
+.table-value {
+	text-align: left;
+	padding: 0% 2% 0% 0%;
+	height: 15%;
+}
+
+.description {
+	width: 100vw;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	transform: translateY(-38.2px);
+	perspective: 1px;
+}
+
+.favourite {
+	display: inline-flex;
+	margin: 12.25px 0 0 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.favourite:active {
+	transform: scale(1.1);
+	transition: 0.1s;
+}
+
+.favourite:hover {
+	filter: drop-shadow(0 0 7.65px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5)) drop-shadow(0 0 3px rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white), 0.5));
+	text-decoration: underline;
+}
+
+.favourite > img {
+	height: 48.9px;
+	display: inline-flex;
+	margin: 1.53px 0 0 0;
+
+}
+
+.favourite > div {
+	margin: 0vw 0vw 0vw 15.3px;
+	padding: 0;
+}
+
+.favourite > div > h6 {
+	margin: 6.1px 0 0 0;
+}
+
+/* ---------- */
+
+.particle-style {
+	background-image: url("/icons/star_full.png");
+	background-size: cover;
+	background-position: 0px;
+	z-index: 1;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#star-empty {
+	content: url("/icons/star_empty.png");
+}
+
+#star-full {
+	content: url("/icons/star_full.png");
+}
+
+.disable-text-select {
+	user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+#hidden-form {
+	display: none;
+}
+
+#hidden-favourite-form {
+	display: none;
+}
+
+/* ------------------------------ MEDIA QUERIES ------------------------------ */
+
+@media screen and (min-width: 2000px) {
+	.character-table {
+		font-size: 32px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.back {
+		height: calc(296.7px * 2.3);
+		display: block;
+		text-align: center;
+	}
+
+	.front {
+		width: 100vw;
+		height: 267.75px;
+		text-align: right;
+		background-color: var(--primary);
+	}
+
+	.front::before {
+		all: unset;
+		display: none;
+	}
+
+	.character-description {
+		text-align: left;
+		transform: translateY(-32%);
+		position: relative;
+	}
+
+	.character-card {
+		position: relative;
+		transform: translateY(-20%);
+	}
+
+	.table-card {
+		width: 630px;
+		height: 280px;
+		transform: none;
+		margin: 50px auto 50px auto;
+	}
+
+	.character-table {
+		font-size: 24.5px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.back {
+		height: calc(296.7px * 3.14);
+	}
+
+	.front {
+		height: calc( 267.75px * 1.9);
+		display: grid;
+		justify-items: center;
+	}
+
+	.character-description {
+		width: 100%;
+		text-align: center;
+	}
+
+	.character-description > .favourite {
+		text-align: left;
+	}
+
+	.table-card {
+		width: 87.5%;
+	}
+
+}
+
+
+@media screen and (max-width: 425px) {
+
+	.front {
+
+		position: relative;
+		margin: 0px;
+		
+		width: 100%;
+		height: calc( 267.75px * 1.9);
+		text-align: center;
+		background-color: var(--primary);
+		
+		display: grid;
+		justify-items: center;
+		justify-content: center;
+	}
+	
+	.character-card {
+		width: 250px;
+		background-color: var(--secondary);
+		border-radius: 20%;
+		
+		margin: 0 auto;
+	
+		justify-content: center;
+		align-items: center;
+		display: inline-flex;
+		
+		position: relative;
+	}
+
+	.character-description {
+		font-size: 33px;
+	}
+
+	.character-table {
+		font-size: 20px;
+		margin: 3% 7%;
+	}
+
+	.character-table td:nth-child(2) {
+		font-size: 20px;
+		text-align: right;
+	}
+
+	
+	.description > .description-card > div:not(.line) {
+		width: 85%;
+		margin: inherit auto;
+		font-size: 23px;
+	}
+
+	
+	.description > .description-card > div:not(.line) > p {
+		width: 100%;
+		margin: inherit auto;
+	}
+
+	.related-characters > h2 {
+		font-size: 32px;
+	}
+
+}

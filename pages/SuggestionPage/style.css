@@ -1,0 +1,372 @@
+html {
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0px;
+	/* overflow-x: hidden; */
+}
+
+.suggest-info {
+	padding: 20px 0;
+	width: 100%;
+	height: fit-content;
+	background-color: var(--primary);
+	word-wrap: break-word;
+}
+
+.suggest-info > h2 {
+	font-size: 40px;
+	margin: 20px 70px;
+}
+
+.suggest-info > h3 {
+	font-size: 25px;
+	margin: 20px 70px;
+	font-weight: normal;
+}
+
+.card {
+	width: 95%;
+	/* width: calc(85% - 55px); */
+	/* padding: 50px 55px; */
+	/* border-radius: 50px; */
+	/* background-color: var(--primary); */
+	margin: 45px auto;
+
+	font-size: 25px;
+	font-weight: bold;
+
+	line-height: 25px;
+
+}
+
+.card > form {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.card .line {
+	margin: 8px auto;
+}
+/* 
+.card .line:nth-child(4n + 2) {
+	display: none;
+} */
+
+.card table > tbody > tr:not(:nth-child(2)) {
+	height: 40px;
+	/* background-color: green; */
+}
+
+.card table {
+	width: 46%;
+	min-width: 383px;
+	/* min-width: 280px; */
+	height: fit-content;
+	/* max-width: 500px; */
+	margin: 15px 0;
+	/* background-color: blue; */
+	/* height: 40px; */
+	/* margin: 10px 0; */
+	/* background-color: aqua; */
+	background-color: var(--primary);
+	border-radius: 30px;
+	padding: 30px 25px;
+	margin: 30px 0;
+}
+
+/* ------------------------------------------ Radio ------------------------------ */
+
+/* Customize the label (the container) */
+.card .container {
+	/* font-weight: bold; */
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	/* margin-bottom: 12px; */
+	cursor: pointer;
+	/* font-size: 22px; */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* background-color: blue; */
+}
+
+/* Hide the browser's default checkbox */
+.card .container input[type=radio] {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.card .radio-selection {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	background-color: var(--white);
+	border-radius: 50px;
+
+	filter: drop-shadow(0px 0px 9.2px rgba(0, 0, 0, calc(0.5 * var(--dark-mode) + (1 - var(--dark-mode)) * 0.3)));
+}
+
+/* On mouse-hover, add a background color */
+.card .container:hover input[type=radio] ~ .radio-selection {
+	background-color: var(--extra-light-gray);
+	transition: 0.05s;
+}
+.card .container:hover {
+	color: var(--extra-light-gray);
+}
+
+/* When the checkbox is checked, add a background */
+.card .container input[type=radio]:checked ~ .radio-selection {
+	background-color: var(--secondary);
+}
+
+/* Create the radio-selection/indicator (hidden when not checked) */
+.card .radio-selection:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Show the radio-selection when checked */
+.card .container input[type=radio]:checked ~ .radio-selection:after {
+	display: block;
+}
+
+/* Style the radio-selection/indicator */
+.card .container .radio-selection:after {
+	left: 6.8px;
+	top: 6.8px;
+	/* top: 9px;
+	left: 9px; */
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+
+/*
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg); */
+}
+
+/* ------------------------------------------- */
+
+.text-input {
+	all: unset;
+
+	width: calc(100% - 30px);
+	/* max-width: 400px; */
+	height: 30px;
+	border-radius: 10px;
+	background-color: var(--white);
+	padding: 6px 15px;
+    font-size: 22px;
+	font-weight: bold;
+	color: var(--extra-dark-gray);
+	margin: 5px 0 0 0;
+	transition: var(--dark-mode-transition-duration) background-color;
+	text-align: left;
+}
+.text-input::placeholder {
+	color: var(--light-gray);
+}
+.text-input:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+}
+
+.year-input {
+	all: unset;
+
+	width: calc(100% - 30px);
+	/* width: 100%; */
+	max-width: 130px;
+	min-width: 70px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: var(--white);
+	padding: 6px 15px;
+    font-size: 22px;
+	font-weight: bold;
+	color: var(--extra-dark-gray);
+	margin: 5px 0 0 0;
+	text-align: center;
+	transition: var(--dark-mode-transition-duration) background-color;
+}
+.year-input::placeholder {
+	color: var(--light-gray);
+}
+.year-input:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+}
+
+.year-table {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.year-table > tbody {
+	width: 100%;
+}
+
+
+.year-table tr {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* .year-table tr > td { */
+	/* white-space: nowrap; */
+/* } */
+
+.year-table tr > td:nth-child(2) {
+	text-align: right;
+	width: 30%;
+}
+
+
+.submit-button {
+	width: 40%;
+	height: 60px;
+	margin: 15px 0;
+	/* margin: auto 2% auto 0; */
+}
+.submit-button > * {
+	all:unset;
+
+	width: calc(100% - 9.5px * 2);
+	height: calc(100% - 9.5px * 2);
+	border-radius: 40px;
+
+	border: solid var(--secondary) 9.5px;
+
+	text-align: center;
+
+
+	font-size: 29px;
+	font-weight: bold;
+
+
+	background-color: var(--secondary);
+
+	color: var(--white);
+}
+.submit-button > *:hover {
+
+	background-color: var(--white);
+	border-color: var(--secondary);
+	color: var(--secondary);
+}
+.submit-button > *:active {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--white);
+}
+.submit-button > *:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+}
+
+.text-area {
+	all: unset;
+
+	width: calc(100% - 30px);
+	/* max-width: 400px; */
+	height: 70px;
+	border-radius: 10px;
+	background-color: var(--white);
+	padding: 6px 15px;
+    font-size: 22px;
+	font-weight: bold;
+	color: var(--extra-dark-gray);
+	margin: 5px 0 0 0;
+	transition: var(--dark-mode-transition-duration) background-color;
+	text-align: left;
+}
+.text-area::placeholder {
+	color: var(--light-gray);
+}
+.text-area:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+		
+	.card {
+		width: 100%;
+	}
+
+	.card > form {
+		display: inline-flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	
+	.card table {
+		width: 70%;
+		
+	}
+
+		
+	.submit-button {
+		width: 68%;
+		min-width: 383px;
+	}
+
+	.year-input {
+		min-width: 50px;
+	}
+
+	.suggest-info > h2 {
+		/* font-size: 40px; */
+		margin: 20px 40px;
+	}
+
+	.suggest-info > h3 {
+		/* font-size: 25px; */
+		margin: 20px 40px;
+		font-weight: normal;
+	}
+
+}
+
+
+@media screen and (max-width: 400px) {
+	.card {
+		font-size: 18px;
+	}
+	
+	.card table {
+		padding: 15px 12px;
+		min-width: 284px;
+	}
+		
+	.submit-button {
+		min-width: 284px;
+	}
+	
+}

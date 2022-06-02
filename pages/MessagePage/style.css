@@ -1,0 +1,167 @@
+html {
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0px;
+}
+
+
+.card {
+	background-color: var(--primary);
+	color: white;
+	border-radius: 50px;
+	width: 40%;
+	min-width: 300px;
+	margin: 50px auto;
+	padding: 30px 50px 50px 50px;
+	font-size: 20px;
+}
+
+.message-icon {
+	width: 100%;
+	height: 175px;
+	text-align: center;
+}
+
+.message-icon > img {
+	height: 100%;
+	object-fit: contain;
+}
+
+.header {
+	font-size: 32px;
+	font-weight: bold;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.message {
+	font-size: 25px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+
+.message > span {
+	display: block;
+	width: 100%;
+	height: fit-content;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.submit-button {
+	width: 100%;
+	min-height: 50px;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+.submit-button > * {
+	all:unset;
+
+	width: calc(100% - 10px * 2);
+	height: calc(100% - 10px * 2);
+	border-radius: 40px;
+
+	border: solid var(--secondary) 10px;
+
+	text-align: center;
+
+
+	font-size: 25px;
+	font-weight: bold;
+
+
+	background-color: var(--secondary);
+
+	color: var(--white);
+}
+.submit-button > *:hover {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--secondary);
+}
+.submit-button > *:active {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--white);
+}
+.submit-button > *:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+}
+
+
+.submit-button-2 {
+	width: 100%;
+	min-height: 50px;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+.submit-button-2 > * {
+	all:unset;
+
+	width: calc(100% - 10px * 2);
+	height: calc(100% - 10px * 2);
+	border-radius: 40px;
+
+	border: solid var(--primary) 10px;
+
+	text-align: center;
+
+	font-size: 25px;
+	font-weight: bold;
+
+
+	background-color: var(--primary);
+
+	color: var(--white);
+}
+.submit-button-2 > *:hover {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--primary);
+}
+.submit-button-2 > *:active {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--white);
+}
+.submit-button-2 > *:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 500px) {
+	
+	.card {
+		width: 60%;
+		min-width: 100px;
+	}
+
+	.submit-button > * {
+		font-size: 20px;
+	}
+	
+	.submit-button-2 > * {
+		font-size: 20px;
+	}
+		
+	.header {
+		font-size: 22px;
+		font-weight: bold;
+		margin: 20px 0;
+	}
+
+	.message {
+		font-size: 15px;
+		margin: 20px 0;
+	}
+
+}

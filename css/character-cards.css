@@ -1,0 +1,181 @@
+/* ------------------------------ GENERAL (characetr image) ------------------------------ */
+
+.character-image-container {
+	width: 88%;
+	border-radius: 17%;
+	overflow: hidden;
+	margin: auto;
+	text-align: left;
+}
+.character-image-container:before {
+	/* sets the aspect ratio */
+	padding-top: 100%;
+	/* controls the aspect ratio (is equal to [(WIDTH/HEIGHT)*100]% */
+	content: "";
+	float: left;
+}
+
+.character-image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+/* ------------------------------ Vertical Carachter Card ------------------------------ */
+
+.vertical-character-card {
+	background-color: var(--primary);
+	width: 275.3px;
+	height: 390px;
+	margin: 0 auto 0;
+	border-radius: 53.53px;
+	transition: 0.1s;
+}
+
+.vertical-character-card::before {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 275.3px;
+	height: 390px;
+	z-index: 10000;
+	border-radius: 53.53px;
+	opacity: 0.2;
+	transition: 0.1s;
+}
+
+.vertical-character-card:hover {
+	box-shadow: 0 0 0 12px rgb(0, 0, 0, 0.2);
+	transition: 0.1s;
+}
+
+
+.vertical-character-card > div {
+	width: 100%;
+	margin-top: 5%;
+}
+
+.vertical-character-card > div::after {
+	padding-top: 100%;
+	/* controls the aspect ratio (is equal to [(WIDTH/HEIGHT)*100]% */
+	content: "";
+	float: left;
+}
+
+.vertical-character-card > div > div > a {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+	/* margin: 1vw 1vw 0; */
+	margin: 15.3px 15.3px;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
+.vertical-character-card > div > div:nth-child(2) {
+	margin: 8px 0 0 0;
+}
+
+.vertical-character-card > div > div > p {
+	text-align: center;
+	margin: 12.23px 7.65px 0;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
+.vertical-character-card > div > div:not(.character-image-container) {
+	width: 100%;
+	height: 1.5em;
+
+	line-height: 1.5em;
+}
+
+/* ------------------------------ Horizontal Carachter Card ------------------------------ */
+
+.horizontal-character-card {
+	background-color: var(--primary);
+	width: 470px;
+	height: 250px;
+	margin: 0 auto 0;
+	border-radius: 53.53px;
+	transition: 0.1s;
+	font-size: 24px;
+	overflow: hidden;
+}
+
+.horizontal-character-card::before {
+	position: absolute;
+	display: block;
+	content: "";
+
+	width: 470px;
+	height: 250px;
+
+	z-index: 10000;
+	border-radius: 53.53px;
+	opacity: 0.2;
+	transition: 0.1s;
+}
+
+.horizontal-character-card:hover {
+	box-shadow: 0 0 0 12px rgb(0, 0, 0, 0.2);
+	transition: 0.1s;
+}
+
+.horizontal-character-card > div {
+	height: 100%;
+	margin-right: 5%;
+
+	display: inline-flex;
+    align-items: center;
+	overflow: visible;
+
+}
+
+.horizontal-character-card > div > div > div > a {
+	font-size: 1.43em;
+	font-weight: bold;
+	text-align: left;
+	margin: 15.3px 15.3px;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
+.horizontal-character-card > div > div > div:nth-child(2) {
+	margin: 8px 0 0 0;
+
+}
+
+.horizontal-character-card > div > div > div > p {
+	text-align: left;
+	margin: 24.23px 0 7.65px 15.3px;
+	white-space: nowrap;
+	overflow-x: hidden;
+	
+}
+
+.horizontal-character-card > div > div > div:not(.character-image-container) {
+	width: 100%;
+	height: 1.5em;
+
+	/* per centrare il testo verticalmente */
+	line-height: 1.5em;
+}
+
+.horizontal-character-card > div > .character-image-container {
+	width: calc(250px * 0.88);
+	border-radius: 20%;
+
+	overflow: hidden;
+	margin: 0 0 0 calc(250px * (1 - 0.88) / 2);
+	text-align: left;
+}
+
+
+.horizontal-character-card > div > .character-image-container:before {
+	/* sets the aspect ratio */
+	padding-top: 100%;
+	/* controls the aspect ratio (is equal to [(WIDTH/HEIGHT)*100]% */
+	content: "";
+	float: left;
+}

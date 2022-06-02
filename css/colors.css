@@ -1,0 +1,54 @@
+:root {
+	/* variables */
+
+	/* Calcola come settare il "white" ed il "black" in base alla variabile "--dark-mode-is-active" */
+	--color-value-white: calc(var(--dark-mode) * (40) + (1 - var(--dark-mode)) * (255));
+	--color-value-black: calc(var(--dark-mode) * (255) + (1 - var(--dark-mode)) * (20));
+	--white: rgb(var(--color-value-white), var(--color-value-white), var(--color-value-white));
+	--black: rgb(var(--color-value-black), var(--color-value-black), var(--color-value-black));
+
+	--dark-mode-brighteness-delta: calc(var(--dark-mode) * (20));
+
+
+	--color-saaturation-value: calc(var(--dark-mode) * (90%) + (1 - var(--dark-mode)) * (100%));
+
+	--blue: hsl(216, var(--color-saaturation-value), 50%);
+	--dark-blue: hsl(216, var(--color-saaturation-value), 45%);
+
+	--brown: hsl(30, var(--color-saaturation-value), 24%);
+	--dark-brown: hsl(30, var(--color-saaturation-value), 19%);
+
+	--green: hsl(126, var(--color-saaturation-value), 50%);
+	--dark-green: hsl(126, var(--color-saaturation-value), 45%);
+
+	--orange: hsl(31, var(--color-saaturation-value), 50%);
+	--dark-orange: hsl(31, var(--color-saaturation-value), 45%);
+
+	--purple: hsl(279, var(--color-saaturation-value), 50%);
+	--dark-purple: hsl(279, var(--color-saaturation-value), 45%);
+
+	--red: hsl(0, var(--color-saaturation-value), 50%);
+	--dark-red: hsl(0, var(--color-saaturation-value), 45%);
+
+	--yellow: hsl(53, var(--color-saaturation-value), 47%);
+	--dark-yellow: hsl(53, var(--color-saaturation-value), 42%);
+
+	--pink: hsl(324, var(--color-saaturation-value), 74%);
+	--dark-pink: hsl(324, 68%, 69%);
+
+	--sky-blue: hsl(192, var(--color-saaturation-value), 50%);
+	--dark-sky-blue: hsl(192, var(--color-saaturation-value), 45%);
+
+
+	--color-value-elg: calc(var(--dark-mode) * 50 + (1 - var(--dark-mode)) * 200);
+	--color-value-lg: calc(var(--dark-mode) * 90 + (1 - var(--dark-mode)) * 160);
+	--color-value-g: calc(var(--dark-mode) * 130 + (1 - var(--dark-mode)) * 120);
+	--color-value-dg: calc(var(--dark-mode) * 170 + (1 - var(--dark-mode)) * 80);
+	--color-value-edg: calc(var(--dark-mode) * 210 + (1 - var(--dark-mode)) * 40);
+	
+	--extra-light-gray: rgb(var(--color-value-elg), var(--color-value-elg), var(--color-value-elg));
+	--light-gray: rgb(var(--color-value-lg), var(--color-value-lg), var(--color-value-lg));
+	--gray: rgb(var(--color-value-g), var(--color-value-g), var(--color-value-g));
+	--dark-gray: rgb(var(--color-value-dg), var(--color-value-dg), var(--color-value-dg));
+	--extra-dark-gray: rgb(var(--color-value-edg), var(--color-value-edg), var(--color-value-edg));
+}

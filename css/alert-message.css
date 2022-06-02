@@ -1,0 +1,205 @@
+/* Alert Box per i warning */
+#alert {
+	width: 100vw;
+	height: 0px;
+
+	min-height: 0px;
+
+	position: sticky;
+
+	z-index: 20;
+
+	margin: 0;
+	padding: 0;
+
+	top: 54px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: block;
+	overflow: hidden;
+
+	/* animation: alert-animation-in 0.1s ease-in-out forwards, alert-animation-out 0.1s 1.5s ease-in-out forwards; */
+	/* animation: alert-animation-in 0.1s ease-in-out forwards; */
+}
+
+.alert-box {
+
+	background-color: var(--yellow);
+	color: var(--white);
+
+	height: 0px;
+
+	/* animation: alert-box-in 0.1s ease-in-out forwards, alert-box-out 0.1s 1.5s ease-in-out forwards; */
+	/* animation: alert-box-in 0.1s ease-in-out forwards; */
+}
+
+.block-underneath-content {
+	width: 100vw;
+	height: 0vh;
+	background-color: #000;
+	opacity: 0.45;
+	margin: 0;
+	position: absolute;
+	overflow: hidden;
+
+	/* animation: block-underneath-in 0.01s forwards, block-underneath-out 0.01s 1.5s forwards; */
+	/* animation: block-underneath-in 0.01s forwards; */
+}
+
+.alert-text {
+	display: inline-flex;
+	content: "ERROR: something something";
+	margin: 25px 30px;
+	font-weight: bold;
+
+	
+	font-size: 22px;
+}
+
+/* Close button */
+.close-button {
+
+	color: var(--white);
+	font-weight: bold;
+
+	float: right;
+
+	font-size: 22px;
+	line-height: 20px;
+
+	cursor: pointer;
+
+	margin: 17px;
+	padding: 10px;
+
+	transform: scale(1.5);
+
+}
+
+/* Mouse Hover sul Close button */
+.close-button:hover {
+	color: var(--gray);
+}
+
+
+@keyframes alert-animation-in {
+	0% {
+		height: 0px;
+		min-height: 0px;
+
+		display: none;
+		overflow: visible;
+	}
+	1% {
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+	} 
+	100% {
+		min-height: 75px;
+		height: fit-content;
+
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+		overflow: visible;
+	}
+}
+
+
+@keyframes alert-animation-out {
+	0% {
+		min-height: 75px;
+		height: auto;
+		
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+	}
+	99% {
+		display: none;
+	} 
+	100% {
+		overflow: hidden;
+		min-height: 0px;
+		height: 0px;
+
+		display: none;
+		
+	}
+}
+
+
+@keyframes alert-box-in {
+	0% {
+		height: 0px;
+		min-height: 0px;
+
+		display: none;
+	}
+	1% {
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+	} 
+	100% {
+		min-height: 75px;
+		height: fit-content;
+
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+}
+
+
+@keyframes alert-box-out {
+	0% {
+		min-height: 75px;
+		height: auto;
+		
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+	99% {
+		display: none;
+	} 
+	100% {
+		min-height: 0px;
+		height: 0px;
+
+		display: none;
+		
+	}
+}
+
+
+@keyframes block-underneath-in {
+	from {
+		height: 0vh;
+	} to {
+		height: 100vh;
+	}
+}
+
+
+@keyframes block-underneath-out {
+	from {
+		height: 100vh;
+	} to {
+		height: 0vh;
+	}
+}
+

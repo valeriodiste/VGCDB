@@ -1,0 +1,81 @@
+/* ----------------------------- Font import settings ----------------------------- */
+
+@font-face {
+	src: url('/font/GOTHIC.TTF');
+	font-family: 'Century Gothic';
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('/font/GOTHICB.TTF');
+	font-family: 'Century Gothic';
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('/font/GOTHICI.TTF');
+	font-family: 'Century Gothic';
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	src: url('/font/GOTHICBI.TTF');
+	font-family: 'Century Gothic';
+	font-weight: bold;
+	font-style: italic;
+}
+
+* {
+	font-family: 'Century Gothic';
+	color: var(--white);
+	transition: var(--dark-mode-transition-duration) color;
+}
+
+/* ----------------------------- HEADERS ----------------------------- */
+
+h1 {
+	font-size: 2.3em;
+	margin: 0%;
+}
+
+h2 {
+	font-size: 2em;
+	margin: 0%;
+}
+
+h3 {
+	font-size: 1.3em;
+	margin: 0%;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 0%;
+}
+
+h5 {
+	font-size: 0.6em;
+	margin: 0%;
+}
+
+h6 {
+	font-size: 0.5em;
+	margin: 0%;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* ----------------------------- LINKS ----------------------------- */
+
+a, a:visited {
+	color: var(--white);
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: inherit;
+	text-decoration: underline;
+}

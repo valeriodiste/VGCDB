@@ -1,0 +1,485 @@
+
+html {
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0px;
+	/* overflow-x: hidden; */
+}
+
+#body-wrapper {
+	height: 100%;
+}
+
+
+.card {
+	background-color: var(--primary);
+	color: var(white);
+	border-radius: 50px;
+	width: 50%;
+	min-width: 300px;
+	margin: 50px auto;
+	padding: 10px 50px 20px 50px;
+	font-size: 20px;
+}
+
+.card > .title {
+	font-size: 40px;
+	font-weight: bold;
+}
+.card > .title > div:not(.line) {
+	margin-bottom: 20px;
+}
+
+.card > form > div:not(.submit-button) {
+	margin: 20px 0px;
+}
+
+.card > form > div > h3 {
+	margin-bottom: 10px;
+}
+
+.card > div {
+	margin: 30px 0 20px 0;
+	text-align: center;
+}
+
+
+.text-input {
+	all: unset;
+
+	width: calc(100% - 30px);
+	/* max-width: 400px; */
+	height: 35px;
+	border-radius: 10px;
+	background-color: var(--white);
+	padding: 6px 15px;
+    font-size: 22px;
+	font-weight: bold;
+	color: var(--extra-dark-gray);
+	margin: 5px 0 0 0;
+	transition: var(--dark-mode-transition-duration) background-color;
+	text-align: left;
+}
+.text-input::placeholder {
+	color: var(--light-gray);
+}
+.text-input:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 7.65px rgb(0, 0, 0, 0.2);
+}
+
+
+.submit-button {
+	width: 100%;
+	height: 50px;
+	/* margin: auto 2% auto 0; */
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+.submit-button > * {
+	all:unset;
+
+	width: calc(100% - 9.5px * 2);
+	min-height: 40px;
+	height: calc(100% - 9.5px * 2);
+	border-radius: 40px;
+
+	border: solid var(--secondary) 9.5px;
+
+	text-align: center;
+
+	font-size: 25px;
+	font-weight: bold;
+
+	background-color: var(--secondary);
+
+	color: var(--white);
+}
+.submit-button > *:hover {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--secondary);
+}
+.submit-button > *:active {
+
+	background-color: var(--white);
+	border-color: var(--white);
+	color: var(--white);
+}
+.submit-button > *:focus {
+	transition-duration: 0.1s;
+	box-shadow: 0 0 0 0.5vw rgb(0, 0, 0, 0.2);
+}
+
+
+/* =================== PASSWORD VALIDATION ============================================= */
+
+.password-validation {
+	position: relative;
+	/* padding: 20px;
+	padding-top: 50px; */
+	top: -67px;
+	z-index: -1;
+	/* background-color: var(--primary);
+
+	height: 30px; */
+	height: 0px;
+
+	transition: 0.2s;
+
+}
+
+.password-validation > div {
+
+	/* height: 201px; */
+
+	/* position: relative; */
+	padding: 20px;
+	/* padding-top: 67px; */
+	/* top: -50px; */
+	z-index: -1;
+	background-color: var(--secondary);
+
+	/* height: 30px; */
+
+	border-start-end-radius: 10px;
+	border-start-start-radius: 10px;
+
+	border-end-end-radius: 20px;
+	border-end-start-radius: 20px;
+
+	width: calc(100% - 40px);
+
+	/* box-shadow: 0 0 0 7px var(--secondary); */
+
+	overflow: hidden;
+
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	color: var(--secondary);
+	box-shadow: 0 0 0 0px var(--secondary);
+
+}
+
+
+.password-validation > div > div:nth-child(1) {
+	margin: 0 0 13px 0;
+}
+
+.password-validation > div > div:not(:nth-child(1)) {
+	margin: 10px 0;
+	margin-left: 40px;
+
+	line-height: 30px;
+}
+
+.is-valid::before {
+	content: "L";
+	font-weight: bold;
+	display: inline;
+	position: absolute;
+
+	content: "L";
+	font-weight: bold;
+	display: inline;
+	position: absolute;
+	background-color: var(--dark-green);
+	border-radius: 100px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	margin: 0;
+	text-align: center;
+	transform: translateX(calc(-40px - 2px)) scaleX(-1) rotate(-45deg);
+}
+
+.not-valid::before {
+	content: '\00d7';
+	font-weight: bold;
+	display: inline;
+	position: absolute;
+	background-color: var(--red);
+	border-radius: 100px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	margin: 0;
+	text-align: center;
+	transform: translateX(calc(-40px - 2px));
+}
+
+
+@keyframes password-validation-in {
+	0% {
+		height: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		color: var(--secondary);
+		box-shadow: 0 0 0 0px var(--secondary);
+	} 50% {
+		box-shadow: 0 0 0 7px var(--secondary);
+		color: var(--white);
+	} 100% {
+		height: 201px;
+		padding-bottom: 20px;
+		padding-top: 67px;
+		color: var(--white);
+		box-shadow: 0 0 0 7px var(--secondary);
+	}
+}
+
+
+@keyframes password-validation-out {
+	0% {
+		height: 201px;
+		padding-bottom: 20px;
+		padding-top: 67px;
+		color: var(--white);
+		box-shadow: 0 0 0 7px var(--secondary);
+	} 50% {
+		box-shadow: 0 0 0 0px var(--secondary);
+		color: var(--secondary);
+	} 100% {
+		height: 47px;
+		padding-top: 0;
+		padding-bottom: 0;
+		color: var(--secondary);
+		box-shadow: 0 0 0 0px var(--secondary);
+	}
+}
+
+
+/* --------------------------- RADIO FOR PROFILE ICONS ----------------------------------- */
+
+.radio-container {
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+/* Customize the label (the container) */
+.radio-container > .container {
+	/* font-weight: bold; */
+	display: flex;
+	position: relative;
+	/* padding-left: 30px; */
+	/* margin-bottom: 12px; */
+	cursor: pointer;
+	/* font-size: 22px; */
+	user-select: none;
+	/* background-color: blue; */
+	margin: 5px;
+	width: 110px;
+	height: 110px;
+	align-items: center;
+
+}
+
+/* Hide the browser's default checkbox */
+.radio-container > .container > input[type=radio] {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.radio-container > .container:hover > .image-container > img{
+	filter: brightness(0.85);
+	transition: 0.05;
+}
+
+.radio-container .radio-selection:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.radio-container .image-container {
+	width: 90%;
+	height: 90%;
+	margin: auto auto;
+	/* height: 110px; */
+	vertical-align: center;
+	border-radius: 100px;
+	transition: 0.2s;
+}
+.radio-container .image-container > img {
+	width: 100%;
+	object-fit: contain;
+	margin: auto auto;
+	vertical-align: center;
+	/* z-index: -1; */
+	/* height: 100%; */
+}
+
+.radio-container > .container .tick_container {
+	position: absolute;
+	border-radius: 100px;
+	user-select: none;
+	pointer-events: none;
+	width: 40%;
+	height: 40%;
+	text-align: center;
+	overflow: hidden;
+	font-weight: bold;
+	font-size: 30px;
+	background-color: var(--green);
+	transform: scaleX(0) scaleY(0) rotate(-45deg);
+	margin: 30%;
+	z-index: 1;
+	
+}
+.radio-container > .container .tick_container > .tick:before {
+	/* line-height: 43px; */
+
+	content: "L";
+	font-weight: bold;
+
+	/* display: inline; */
+	/* background-color: var(--dark-green); */
+	/* border-radius: 100px; */
+	/* width: 30px; */
+	/* height: 30px; */
+	/* line-height: 30px; */
+	/* overflow: hidden; */
+	/* margin: 0; */
+	/* text-align: center; */
+}
+
+.radio-container input[type="radio"]:checked ~ .image-container {
+	width: 100%;
+	height: 100%;
+	background-color: var(--secondary);
+	box-shadow: 0 0 0 7px var(--secondary);
+	transition: 0.2s;
+}
+
+.radio-container input[type="radio"]:checked ~ .tick_container {
+	transform: scaleX(-1) scaleY(1) rotate(-45deg);
+	animation: tick-out 0.3s 0.9s forwards;
+	transition: 0.2s;
+}
+
+@keyframes tick-out {
+	from {
+		transform: scaleX(-1) scaleY(1) rotate(-45deg);
+	} to {
+		transform: scaleX(0) scaleY(0) rotate(-45deg);
+	}
+}
+
+/* Create a custom checkbox */
+/* .radio-container .radio-selection {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	background-color: var(--white);
+	border-radius: 50px;
+
+	filter: drop-shadow(0px 0px 9.2px rgba(0, 0, 0, calc(0.5 * var(--dark-mode) + (1 - var(--dark-mode)) * 0.3)));
+} */
+
+/* On mouse-hover, add a background color */
+/* .radio-container > .container:hover > input[type=radio] ~ .radio-selection {
+	background-color: var(--extra-light-gray);
+	transition: 0.05s;
+} */
+
+/* When the checkbox is checked, add a background */
+/* .radio-container > .container > input[type=radio]:checked ~ .radio-selection {
+	background-color: var(--secondary);
+} */
+
+/* Create the radio-selection/indicator (hidden when not checked) */
+
+/* Show the radio-selection when checked */
+/* .radio-container > .container > input[type=radio]:checked ~ .radio-selection:after {
+	display: block;
+} */
+
+/* Style the radio-selection/indicator */
+/* .radio-container > .container .radio-selection:after {
+	left: 6.8px;
+	top: 6.8px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+} */
+
+
+
+
+
+
+/* ----------- OLD CSS ----------------------- */
+/* 
+.parent{
+  height: auto;
+}
+.parent > .row{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.col img{
+  height:150px;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  object-fit: cover;
+
+  border-radius: 100px;
+}
+.col label{
+  margin: 8px;
+  position: relative;
+}
+.imgbgchk:checked + label>.tick_container{
+  opacity: 1;
+}
+.imgbgchk:checked + label>img{
+  transform: scale(1.15);
+  opacity: 0.3;
+}
+.tick_container {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-align: center;
+
+}
+.tick {
+  background-color: var(--dark-green);
+  color: var(--white);
+  font-size: 16px;
+  padding: 6px 12px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-weight: bold;
+} */
+
+@media screen and (max-width: 450px) {
+	.card {
+		padding: 5px 25px 15px 25px;
+		width: 60%;
+		min-width: 200px;
+	}
+}
