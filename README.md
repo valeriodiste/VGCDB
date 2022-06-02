@@ -11,7 +11,8 @@
 - PHP (lato server)
 - AJAX (+ PHP) (per la comunicazione asincrona col server per risultati di ricerca e aggiunta di un personaggio ai preferiti)
 - postgreSQL (+ SQL & pgAdmin) (gestione database relazionale)
-- Librerie esterne:
+
+**Librerie esterne:**
 - JQuery (scripting)
 - Three.js (visualizzazione della grafica 3D e delle relative animazioni nella homepage del sito)
 
