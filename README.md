@@ -1,64 +1,57 @@
-<h3>VGCDB: Video Game Characters DataBase</h3>
+# VGCDB: Video Game Characters DataBase
 
-> Sito web di informazioni su personaggi dei videogiochi di vari universi (o serie / franchises).
+> Website providing information about characters from video games of various universes (or series/franchises).
 
+## Technologies Used
 
-**Tecnologie utilizzate**
-
-- HTML (lato client)
-- CSS (fogli di stile)
+- HTML (client-side)
+- CSS (stylesheets)
 - JavaScript (scripting)
-- PHP (lato server)
-- AJAX (+ PHP) (per la comunicazione asincrona col server per risultati di ricerca e aggiunta di un personaggio ai preferiti)
-- postgreSQL (+ SQL & pgAdmin) (gestione database relazionale)
+- PHP (server-side)
+- AJAX (+ PHP) (for asynchronous communication with the server for search results and adding a character to favorites)
+- PostgreSQL (+ SQL & pgAdmin) (relational database management)
 
-**Librerie esterne:**
+## External Libraries
+
 - JQuery (scripting)
-- Three.js (visualizzazione della grafica 3D e delle relative animazioni nella homepage del sito)
+- Three.js (3D graphics visualization and animations on the site's homepage)
 
-**Strumenti aggiuntivi:**
+## Additional Tools
 
-- Blender (software di grafica 3D per il "modelling" del personaggio 3D "Super Mario" e delle relative animazioni, del rigging, del texturing, ecc…)
-- Adobe Illustrator (design iniziale delle pagine / mockup, manipolazione immagini, manipolazione SVG e creazione di icone apposite per gli elementi del sito)
-- Google Fogli (manipolazione e creazione dei dati dei personaggi del database, poi importati nel database come CSV)
-- Wikipedia (fonte informazioni dei personaggi del database)
+- Blender (3D graphics software for modeling the 3D character "Super Mario" and its animations, rigging, texturing, etc.)
+- Adobe Illustrator (initial page design/mockup, image manipulation, SVG manipulation, and creating icons for site elements)
+- Google Sheets (handling and creating character data for the database, later imported into the database as CSV)
+- Wikipedia (source of information for characters in the database)
 
+## Team Members
 
-**Componenti del gruppo**
+- Valerio Di Stefano (student ID: 1898728)
+- Giuseppe Prisco (student ID: 1895709)
 
-Valerio Di Stefano (matricola 1898728)
+## General Functionality Description of the Site
 
-Giuseppe Prisco (matricola 1895709)
+The website allows users to search for characters by name and other additional filters (name, universe of origin, year of first appearance, role in the game, gender, hair color, and eye color) from the Advanced Search, HomePage (using the character name search bar), and Results Page (using the side filters).
 
-**Descrizione funzionalità generali del sito**
+Various data integrity checks and format validations have been implemented on the character search filter form (e.g., checks on the year of first appearance range).
 
-Il sito permette la ricerca di personaggi per nome ed altri filtri aggiuntivi (nome, universo di appartenenza, anno di prima apparizione, ruolo nel videogioco di appartenenza, sesso, colore dei capelli e colore degli occhi) dalle pagine di Advanced Search, dalla HomePage (utilizzando la barra di ricerca per nome del personaggio) e Results Page (utilizzando i filtri laterali).
+Character information and details are stored in a local relational database managed with PostgreSQL.
 
-Sul form dei filtri di ricerca dei personaggi sono stati effettuati vari controlli di integrità dei dati e rispetto del formato richiesto (vari controlli sul range dell’anno di prima apparizione del personaggio).
+The site allows users to view information about a character on a dedicated page, including name, universe of origin, description, character and banner images, year of first appearance, role in the game, gender, hair color, and eye color. It also displays related characters from the same universe.
 
-I personaggi e le informazioni su di essi sono salvati in un database relazionale (locale) postgres gestito con postgreSQL.
+Users can register and log in with a user account, which includes personalized username and profile image options. They can add a character to their favorites list (from the character image view page) and suggest adding a character to the site's database.
 
-Il sito permette di visualizzare informazioni su un personaggio in una pagina dedicata (nome, universo di appartenenza, descrizione, immagini del personaggio e del banner, anno di prima apparizione, ruolo nel videogioco di appartenenza, sesso, colore dei capelli e colore degli occhi) e i personaggi ad esso correlati (personaggi di uno stesso universo).
+Various data integrity checks and format validations have been implemented on the user registration form (e.g., checking username availability on the site, password format with regular expressions).
 
-Il sito permette inoltre di effettuare la registrazione ed il login con uno user account (con personalizzazione del nome utente e dell’immagine del profilo), per poter aggiungere un personaggio ai preferiti (dalla pagina di visualizzazione delle immagini del personaggio) e suggerire l’aggiunta di un personaggio al database del sito. 
+Similarly, the login form has been equipped with various data integrity checks (e.g., verifying the existence of the username on the site, checking the correctness of the user's password).
 
-Sul form di registrazione sono stati effettuati vari controlli di integrità dei dati e rispetto del formato richiesto (controllo della disponibilità dello username nel sito, controllo del formato della password con espressioni regolari).
+User data is saved in the database (encrypted), and user access control is managed through PHP using session storage on the server.
 
-Anche sul form di login sono stati effettuati vari controlli di integrità dei dati (controllo dell’esistenza dello username nel sito, controllo del formato della correttezza della password dell’utente).
+The user's profile page allows them to view their current site status, including username, profile icon, number of characters added to favorites, the list of favorite characters, and the number of characters suggested to the site.
 
-I dati dell’utente sono salvati nel database (in maniera criptata) e il controllo dell’accesso dell’utente è effettuato mediante session storage (sul server, tramite PHP).
+The site includes options to enable/disable page transition animations and a "dark mode" for the site, displayed in the menu bar and managed through local storage in the browser.
 
-La pagina del profilo dell’utente consente di visualizzare le informazioni dell’utente attualmente “loggato” nel sito, quali username, icona del profilo, numero di personaggi aggiunti ai preferiti e relativa lista dei personaggi preferiti, numero di personaggi suggeriti al sito.
+All pages of the site are responsive, utilizing CSS only to handle responsiveness (not using the Bootstrap library to provide more customized styles, animations, and controls). Media queries, flexbox, and grid have been used to rearrange page layouts.
 
-Nel sito è presente la possibilità di attivare/disattivare le animazioni di transizione delle pagine e di attivare/disattivare la “modalità scura” per il sito: le 2 opzioni sono visualizzate nella barra del menu e gestite attraverso local storage del browser.
+CSS stylesheets have also been utilized for various site animations (in addition to simple animations like page transition and interactions with buttons, checkboxes, clickable cards, links, etc.). More complex animations include the homepage "loader" animation, star "pop" animation when adding a character to favorites, appearance/disappearance and management of password fields and other form fields, etc.
 
-Tutte le pagine del sito sono responsive: sono stati utilizzati i soli CSS del sito per la gestione della responsiveness di tutte le pagine (non è stata utilizzata la libreria Bootstrap, per poter personalizzare gli stili, le animazioni ed i controlli del sito il più possibile), in particolare utilizzando varie media queries in tutte le pagine, flexbox e grid con relativa ridisposizione del layout delle pagine.
-
-I fogli di stile CSS sono stati utilizzati anche per la realizzazione di varie animazioni del sito (oltre alle più semplici, quali l’animazione di transizione tra una pagina e l’altra e le animazioni di interazione con bottoni, checkboxes, card cliccabili, link, ecc…, sono stati utilizzati gli stili CSS anche per le animazioni più complesse come l’animazione del “loader” dell’homepage, l’animazione di “pop” delle stelle per l’aggiunta del personaggio ai preferiti, l’animazione di comparsa, scomparsa e gestione dei controlli di password e altri campi del form, ecc…).
-
-Javascript è stato utilizzato, oltre che per effettuare vari controlli dei dati immessi nei vari form del sito, anche per il controllo dei comportamenti dei vari elementi del sito all’interazione con l’utente (insieme alle animazioni dei fogli di stile CSS, ad esempio per l’animazione di transizione tra le pagine del sito), e per il controllo della visualizzazione di aspetti dinamici del sito (aggiustamento della dimensione del font dei nomi dei personaggi nelle varie pagine PHP, quindi con contenuti dinamici, del sito, comparsa e controllo delle animazioni e delle funzioni della barra di navigazione, gestione del dropdown degli universi presenti nel sito nelle sezioni di ricerca dei personaggi, in base all’input dell’utente, ecc…).
-
-Javascript, insieme alla libreria esterna Three.js, è stato utilizzato per controllare il caricamento, la visualizzazione, e tutti gli altri aspetti relativi al modello 3D visualizzato nella HomePage, così come per le animazioni di interazione con l’utente (animazione di “follow” del puntatore dell’utente, animazione di “saluto” verso l’utente al click sul modello 3D).
-
-
-
+JavaScript has been used not only for data validation in various site forms but also for controlling site element behavior upon user interaction (working with CSS animations for page transitions, among others). JavaScript, along with the external library Three.js, has been used to control the loading, display, and other aspects of the 3D model on the homepage, as well as interaction animations (e.g., "follow" animation of the user's pointer, greeting animation toward the user upon clicking the 3D model).
